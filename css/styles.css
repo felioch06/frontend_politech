@@ -5,13 +5,15 @@
   font-family: 'Inter', sans-serif;
 }
 
-body {
+html, body {
   background: #f5f7fb;
   color: #333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
+
 
 main {
   flex: 1;
@@ -38,7 +40,10 @@ main {
 .logo {
   font-weight: 600;
   font-size: 20px;
+  text-decoration: none;
+  color: #333;
 }
+
 
 .navbar nav a {
   margin-left: 20px;
@@ -256,7 +261,7 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeIn 0.3s ease;
+  animation: modalFadeIn 0.3s ease;
 }
 
 .modal.active {
@@ -271,8 +276,9 @@ footer {
   max-width: 400px;
   width: 90%;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: modalSlideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 
 .modal-icon {
   width: 60px;
@@ -313,12 +319,12 @@ footer {
   background: #3b5be0;
 }
 
-@keyframes fadeIn {
+@keyframes modalFadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes slideUp {
+@keyframes modalSlideUp {
   from { transform: translateY(30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
