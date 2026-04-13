@@ -365,3 +365,80 @@ footer {
   border-radius: 5px;
   cursor: pointer;
 }
+/* Favoritos */
+.favorites-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.favorites-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.favorites-form .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.favorites-form label {
+  flex: 0 0 150px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.favorites-form input,
+.favorites-form textarea {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fdfdfd;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.favorites-form input:focus,
+.favorites-form textarea:focus {
+  outline: none;
+  border-color: #4a6cf7;
+  background: white;
+  box-shadow: 0 0 10px rgba(74, 108, 247, 0.1);
+}
+
+.favorites-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.favorites-cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-favorito {
+  padding: 15px 40px;
+  border: none;
+  background: #4a6cf7;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+}
+
+.btn-favorito:hover {
+  background: #3b5be0;
+}
