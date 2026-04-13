@@ -23,4 +23,7 @@ function closeModal() {
     if (modal) {
         modal.classList.remove('active');
     }
+function verDetalle(servicio) {
+    alert("Estás viendo el servicio: " + servicio);
+}    
 }
