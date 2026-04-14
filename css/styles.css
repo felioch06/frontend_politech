@@ -147,6 +147,7 @@ main {
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
+  text-decoration: none;
 }
 
 .cta-btn:hover {
@@ -327,13 +328,6 @@ footer {
 @keyframes modalSlideUp {
   from { transform: translateY(30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
-}
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  padding: 40px;
 }
 
 .card {
