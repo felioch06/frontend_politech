@@ -22,28 +22,14 @@
   </header>
 
   <!-- Favoritos Section -->
-  <main class="centered-content">
+  <main>
+    <section class="hero">
+      <h1>Mis Favoritos</h1>
+      <p>Servicios que has guardado para ver más tarde</p>
+    </section>
+
     <div class="favorites-container">
-
-      <div class="favorites-header">
-        <p>*Agrega tus servicios favoritos*</p>
-      </div>
-
-      <form action="#" class="favorites-form">
-        <div class="form-group">
-          <label for="nombreFav">Nombre del Favorito:</label>
-          <input type="text" id="nombreFav" name="nombreFav" placeholder="Ej: Curso IA, Ciberseguridad..." required>
-        </div>
-
-        <div class="form-group">
-          <label for="descripcionFav">Descripción:</label>
-          <textarea id="descripcionFav" name="descripcionFav" placeholder="Escriba por qué es su favorito" required></textarea>
-        </div>
-
-        <div class="favorites-cta">
-          <button type="submit" class="btn-favorito">Guardar Favorito</button>
-        </div>
-      </form>
+      <section id="favorites-list" class="services"></section>
     </div>
   </main>
 
@@ -72,6 +58,7 @@
   </div>
 
   <script src="../js/script.js"></script>
+  <script src="../js/favoritos.js"></script>
 </body>
 </html>
 

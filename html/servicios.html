@@ -28,49 +28,73 @@
       <p>Explora cursos y experiencias digitales</p>
     </section>
 
-    <!-- Servicios (Mockup real) -->
-    <section class="services">
+    <!-- Servicios -->
+    <section class="services services-list">
 
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Desarrollo Web</h3>
-        <p>Creación de sitios modernos.</p>
-        <button class="btn-ver" onclick="verDetalle('Desarrollo Web')">Ver más</button>
+      <div class="card card-horizontal">
+        <div class="card-img">
+          <img src="../assets/code.jpg" alt="Desarrollo Web">
+        </div>
+        <div class="card-info">
+          <h3>Desarrollo Web</h3>
+          <p>Creación de sitios modernos.</p>
+          <button class="btn-ver" onclick="verDetalle('Desarrollo Web')">Ver más</button>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Curso de IA</h3>
-        <p>Aprende inteligencia artificial.</p>
-        <button class="btn-ver" onclick="verDetalle('Curso de IA')">Ver más</button>
+      <div class="card card-horizontal">
+        <div class="card-img">
+          <img src="../assets/ia.jpg" alt="Curso de IA">
+        </div>
+        <div class="card-info">
+          <h3>Curso de IA</h3>
+          <p>Aprende inteligencia artificial.</p>
+          <button class="btn-ver" onclick="verDetalle('Curso de IA')">Ver más</button>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Soporte IT</h3>
-        <p>Soluciones técnicas.</p>
-        <button class="btn-ver" onclick="verDetalle('Soporte IT')">Ver más</button>
+      <div class="card card-horizontal">
+        <div class="card-img">
+          <img src="../assets/IT.webp" alt="Soporte IT">
+        </div>
+        <div class="card-info">
+          <h3>Soporte IT</h3>
+          <p>Soluciones técnicas.</p>
+          <button class="btn-ver" onclick="verDetalle('Soporte IT')">Ver más</button>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Cloud Computing</h3>
-        <p>Servicios en la nube.</p>
-        <button class="btn-ver" onclick="verDetalle('Cloud Computing')">Ver más</button>
+      <div class="card card-horizontal">
+        <div class="card-img">
+          <img src="../assets/cloud.png" alt="Cloud Computing">
+        </div>
+        <div class="card-info">
+          <h3>Cloud Computing</h3>
+          <p>Servicios en la nube.</p>
+          <button class="btn-ver" onclick="verDetalle('Cloud Computing')">Ver más</button>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Ciberseguridad</h3>
-        <p>Protección de datos.</p>
-        <button class="btn-ver" onclick="verDetalle('Ciberseguridad')">Ver más</button>
+      <div class="card card-horizontal">
+        <div class="card-img">
+          <img src="../assets/cyber.webp" alt="Ciberseguridad">
+        </div>
+        <div class="card-info">
+          <h3>Ciberseguridad</h3>
+          <p>Protección de datos.</p>
+          <button class="btn-ver" onclick="verDetalle('Ciberseguridad')">Ver más</button>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Consultoría Tech</h3>
-        <p>Optimización digital.</p>
-        <button class="btn-ver" onclick="verDetalle('Consultoría Tech')">Ver más</button>
+      <div class="card card-horizontal">
+        <div class="card-img">
+          <img src="../assets/consultory.webp" alt="Consultoría Tech">
+        </div>
+        <div class="card-info">
+          <h3>Consultoría Tech</h3>
+          <p>Optimización digital.</p>
+          <button class="btn-ver" onclick="verDetalle('Consultoría Tech')">Ver más</button>
+        </div>
       </div>
 
     </section>
@@ -84,6 +108,26 @@
     <a href="#" class="link-footer">Síguenos</a>
   </footer>
 
+  <!-- Modal de Detalle de Servicio -->
+  <div id="service-modal" class="modal">
+    <div class="modal-content modal-content--service">
+      <div id="modal-icon-container" class="modal-icon">
+        <span id="modal-icon-content"></span>
+      </div>
+
+      <h2 id="modal-title">Nombre del Servicio</h2>
+      <p id="modal-description">Descripción detallada.</p>
+
+      <div class="modal-actions">
+        <button id="btn-add-favorite" class="btn-favorito">Añadir a favoritos</button>
+        <a href="contacto.html" class="btn-contactar">Contacto</a>
+      </div>
+
+      <button class="btn-close-modal secondary" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
   <script src="../js/script.js"></script>
+  <script src="../js/servicios.js"></script>
 </body>
 </html>

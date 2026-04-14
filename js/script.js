@@ -43,8 +43,3 @@ function closeFavModal() {
         modal.classList.remove('active');
     }
 }
-
-// Función para ver detalle de servicios
-function verDetalle(servicio) {
-    alert("Estás viendo el servicio: " + servicio);
-}
