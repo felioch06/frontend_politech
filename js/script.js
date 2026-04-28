@@ -43,15 +43,3 @@ function closeFavModal() {
         modal.classList.remove('active');
     }
 }
-function openCreateModal() {
-  document.getElementById("createModal").classList.add("active");
-}
-
-function closeCreateModal() {
-  document.getElementById("createModal").classList.remove("active");
-}
-
-window.onload = function () {
-  document.getElementById("createModal").classList.remove("active");
-};
-
