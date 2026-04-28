@@ -90,3 +90,58 @@ document.addEventListener('DOMContentLoaded', () => {
         btnFav.addEventListener('click', añadirAFavoritos);
     }
 });
+
+// Abrir modal
+function abrirModalCrear() {
+    document.getElementById('crear-modal').classList.add('active');
+}
+
+// Cerrar modal
+function cerrarModalCrear() {
+    document.getElementById('crear-modal').classList.remove('active');
+}
+
+// Crear curso dinámicamente
+function crearCurso() {
+    const titulo = document.getElementById('titulo-curso').value;
+    const descripcion = document.getElementById('descripcion-curso').value;
+    const imagen = document.getElementById('imagen-curso').value;
+
+    if (!titulo || !descripcion || !imagen) {
+        alert("Completa todos los campos");
+        return;
+    }
+
+    // Crear estructura HTML
+    const contenedor = document.querySelector('.services-list');
+
+    const card = document.createElement('div');
+    card.classList.add('card', 'card-horizontal');
+
+    card.innerHTML = `
+        <div class="card-img">
+            <img src="${imagen}" alt="${titulo}">
+        </div>
+        <div class="card-info">
+            <h3>${titulo}</h3>
+            <p>${descripcion}</p>
+            <button class="btn-ver" onclick="verDetalle('${titulo}')">Ver más</button>
+        </div>
+    `;
+
+    contenedor.appendChild(card);
+
+    // Guardar también en el objeto para que funcione el modal
+    infoServicios[titulo] = {
+        descripcion: descripcion,
+        image: imagen,
+        icon: '📘'
+    };
+
+    // Limpiar inputs
+    document.getElementById('titulo-curso').value = '';
+    document.getElementById('descripcion-curso').value = '';
+    document.getElementById('imagen-curso').value = '';
+
+    cerrarModalCrear();
+}
