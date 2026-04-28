@@ -90,3 +90,70 @@ document.addEventListener('DOMContentLoaded', () => {
         btnFav.addEventListener('click', añadirAFavoritos);
     }
 });
+
+// Abrir modal crear
+function openCreateModal() {
+    document
+        .getElementById('create-modal')
+        .classList.add('active');
+}
+
+// Cerrar modal crear
+function closeCreateModal() {
+    document
+        .getElementById('create-modal')
+        .classList.remove('active');
+}
+
+// Crear servicio
+function crearServicio() {
+
+    const titulo = document.getElementById('new-title').value;
+    const descripcion = document.getElementById('new-description').value;
+    const imagen = document.getElementById('new-image').value;
+
+    // Validación
+    if (!titulo || !descripcion || !imagen) {
+        alert('Completa todos los campos');
+        return;
+    }
+
+    // Contenedor
+    const container = document.getElementById('services-container');
+
+    // Crear card
+    const nuevaCard = document.createElement('div');
+
+    nuevaCard.classList.add('card', 'card-horizontal');
+
+    nuevaCard.innerHTML = `
+        <div class="card-img">
+            <img src="${imagen}" alt="${titulo}">
+        </div>
+
+        <div class="card-info">
+            <h3>${titulo}</h3>
+            <p>${descripcion}</p>
+
+            <button 
+              class="btn-ver"
+              onclick="verDetalle('${titulo}')"
+            >
+              Ver más
+            </button>
+        </div>
+    `;
+
+    // Agregar al HTML
+    container.appendChild(nuevaCard);
+
+    // Limpiar campos
+    document.getElementById('new-title').value = '';
+    document.getElementById('new-description').value = '';
+    document.getElementById('new-image').value = '';
+
+    // Cerrar modal
+    closeCreateModal();
+
+    alert('Curso creado correctamente');
+}
