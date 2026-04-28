@@ -3,157 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <title>Servicios - PoliTech</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
 
-  <!-- Navbar -->
   <header class="navbar">
     <a href="../index.html" class="logo">PoliTech</a>
+
     <nav>
       <a href="../index.html">Home</a>
-      <a href="servicios.html" class="active">Servicios</a>
-      <a href="favoritos.html">Favoritos</a>
-      <a href="contacto.html">Contacto</a>
-      <button class="btn-cancelar" onclick="closeCreateModal()">
-  Cancelar
-</button>
-  Crear
-</button>
+
+      <a href="servicios.html" class="active">
+        Servicios
+      </a>
+
+      <a href="favoritos.html">
+        Favoritos
+      </a>
+
+      <a href="contacto.html">
+        Contacto
+      </a>
+
+      <button class="btn-crear" onclick="openCreateModal()">
+        Crear
+      </button>
     </nav>
   </header>
 
   <main>
 
-    <!-- Hero -->
     <section class="hero">
       <h1>Servicios Tecnológicos</h1>
-      <p>Explora cursos y experiencias digitales</p>
+
+      <p>
+        Explora cursos y experiencias digitales
+      </p>
     </section>
 
-    <!-- Servicios -->
-    <section id="services-container" class="services services-list">
+    <section id="services-container" class="services-list">
 
-      <div class="card card-horizontal">
+      <div class="card">
+
         <div class="card-img">
           <img src="../assets/code.jpg" alt="Desarrollo Web">
         </div>
+
         <div class="card-info">
           <h3>Desarrollo Web</h3>
-          <p>Creación de sitios modernos.</p>
-          <button class="btn-ver" onclick="verDetalle('Desarrollo Web')">Ver más</button>
+
+          <p>
+            Creación de sitios modernos.
+          </p>
+
+          <button class="btn-ver">
+            Ver más
+          </button>
         </div>
+
       </div>
 
-      <div class="card card-horizontal">
+      <div class="card">
+
         <div class="card-img">
           <img src="../assets/ia.jpg" alt="Curso de IA">
         </div>
+
         <div class="card-info">
           <h3>Curso de IA</h3>
-          <p>Aprende inteligencia artificial.</p>
-          <button class="btn-ver" onclick="verDetalle('Curso de IA')">Ver más</button>
+
+          <p>
+            Aprende inteligencia artificial.
+          </p>
+
+          <button class="btn-ver">
+            Ver más
+          </button>
         </div>
+
       </div>
 
-      <div class="card card-horizontal">
+      <div class="card">
+
         <div class="card-img">
           <img src="../assets/IT.webp" alt="Soporte IT">
         </div>
+
         <div class="card-info">
           <h3>Soporte IT</h3>
-          <p>Soluciones técnicas.</p>
-          <button class="btn-ver" onclick="verDetalle('Soporte IT')">Ver más</button>
+
+          <p>
+            Soluciones técnicas.
+          </p>
+
+          <button class="btn-ver">
+            Ver más
+          </button>
         </div>
+
       </div>
 
-      <div class="card card-horizontal">
+      <div class="card">
+
         <div class="card-img">
           <img src="../assets/cloud.png" alt="Cloud Computing">
         </div>
+
         <div class="card-info">
           <h3>Cloud Computing</h3>
-          <p>Servicios en la nube.</p>
-          <button class="btn-ver" onclick="verDetalle('Cloud Computing')">Ver más</button>
+
+          <p>
+            Servicios en la nube.
+          </p>
+
+          <button class="btn-ver">
+            Ver más
+          </button>
         </div>
+
       </div>
 
-      <div class="card card-horizontal">
+      <div class="card">
+
         <div class="card-img">
           <img src="../assets/cyber.webp" alt="Ciberseguridad">
         </div>
+
         <div class="card-info">
           <h3>Ciberseguridad</h3>
-          <p>Protección de datos.</p>
-          <button class="btn-ver" onclick="verDetalle('Ciberseguridad')">Ver más</button>
+
+          <p>
+            Protección de datos.
+          </p>
+
+          <button class="btn-ver">
+            Ver más
+          </button>
         </div>
+
       </div>
 
-      <div class="card card-horizontal">
+      <div class="card">
+
         <div class="card-img">
           <img src="../assets/consultory.webp" alt="Consultoría Tech">
         </div>
+
         <div class="card-info">
           <h3>Consultoría Tech</h3>
-          <p>Optimización digital.</p>
-          <button class="btn-ver" onclick="verDetalle('Consultoría Tech')">Ver más</button>
+
+          <p>
+            Optimización digital.
+          </p>
+
+          <button class="btn-ver">
+            Ver más
+          </button>
         </div>
+
       </div>
 
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer>
-    <a href="#" class="link-footer">Sobre Nosotros</a>
-    <a href="contacto.html" class="link-footer">Contacto</a>
-    <a href="#" class="link-footer">Síguenos</a>
+    <a href="#" class="link-footer">
+      Sobre Nosotros
+    </a>
+
+    <a href="contacto.html" class="link-footer">
+      Contacto
+    </a>
+
+    <a href="#" class="link-footer">
+      Síguenos
+    </a>
   </footer>
 
-<div class="modal" id="createModal">
+  <div class="modal" id="createModal">
 
-  <div class="modal-content">
+    <div class="modal-content">
 
-    <h2>Crear Nuevo Curso</h2>
+      <h2>
+        Crear Nuevo Curso
+      </h2>
 
-    <p class="modal-subtitle">
-      Completa la información para agregar un nuevo curso.
-    </p>
+      <p class="modal-subtitle">
+        Completa la información para agregar un nuevo curso.
+      </p>
 
-    <div class="modal-form-grid">
+      <div class="modal-form-grid">
 
-      <div class="modal-group">
-        <label>Título del curso</label>
-        <input type="text" placeholder="Escribe el título del curso">
+        <div class="modal-group">
+          <label>Título del curso</label>
+
+          <input
+            type="text"
+            placeholder="Escribe el título del curso"
+          >
+        </div>
+
+        <div class="modal-group">
+          <label>Descripción del curso</label>
+
+          <textarea
+            placeholder="Escribe una descripción del curso"
+          ></textarea>
+        </div>
+
+        <div class="modal-group full">
+          <label>URL de la imagen</label>
+
+          <input
+            type="text"
+            placeholder="Pega la URL de la imagen"
+          >
+        </div>
+
       </div>
 
-      <div class="modal-group">
-        <label>Descripción del curso</label>
-        <textarea placeholder="Escribe una descripción del curso"></textarea>
+      <div class="modal-actions">
+
+        <button
+          class="btn-cancelar"
+          onclick="closeCreateModal()"
+        >
+          Cancelar
+        </button>
+
+        <button class="btn-crear-curso">
+          Crear Curso
+        </button>
+
       </div>
 
-      <div class="modal-group full">
-        <label>URL de la imagen</label>
-        <input type="text" placeholder="Pega la URL de la imagen del curso">
-      </div>
-
-    </div>
-
-    <div class="modal-actions">
-      <button class="btn-cancelar">Cancelar</button>
-
-      <button class="btn-crear-curso">
-        Crear Curso
-      </button>
     </div>
 
   </div>
 
-</div>
-
   <script src="../js/script.js"></script>
-  <script src="../js/servicios.js"></script>
+
 </body>
 </html>
