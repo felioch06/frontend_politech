@@ -1,66 +1,85 @@
 /* ===== RESET ===== */
-  padding: 12px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 600;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: #0f172a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
   transition: 0.3s;
 }
 
-.btn-favorito {
-  background: #2563eb;
+.navbar nav a:hover,
+.navbar nav .active {
+  color: #38bdf8;
+}
+
+/* ===== BOTÓN CREAR ===== */
+.btn-crear {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.35);
+}
+
+.btn-crear:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37,99,235,0.45);
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
   color: white;
 }
 
-.btn-favorito:hover {
-  background: #1d4ed8;
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
-.btn-contactar {
-  background: #0f172a;
-  color: white;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-contactar:hover {
-  background: #1e293b;
-}
-
-.btn-close-modal.secondary {
-  background: #e2e8f0;
-}
-
-.btn-close-modal.secondary:hover {
-  background: #cbd5e1;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .navbar nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .services {
-    padding: 20px;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
 }
