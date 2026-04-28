@@ -577,3 +577,14 @@ footer {
   margin-bottom: 25px;
 }
 
+.modal-input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.modal textarea {
+  min-height: 100px;
+}
