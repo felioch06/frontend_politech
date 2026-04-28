@@ -16,7 +16,9 @@
       <a href="servicios.html" class="active">Servicios</a>
       <a href="favoritos.html">Favoritos</a>
       <a href="contacto.html">Contacto</a>
-      <a href="#" class="btn-crear">Crear</a>
+      <button class="btn-crear" onclick="openCreateModal()">
+  Crear
+</button>
     </nav>
   </header>
 
@@ -29,7 +31,7 @@
     </section>
 
     <!-- Servicios -->
-    <section class="services services-list">
+    <section id="services-container" class="services services-list">
 
       <div class="card card-horizontal">
         <div class="card-img">
@@ -126,6 +128,52 @@
       <button class="btn-close-modal secondary" onclick="closeModal()">Cerrar</button>
     </div>
   </div>
+  <!-- Modal Crear Servicio -->
+<div id="create-modal" class="modal">
+  <div class="modal-content">
+
+    <h2>Crear Nuevo Curso</h2>
+
+    <input 
+      type="text" 
+      id="new-title" 
+      placeholder="Título del curso"
+      class="modal-input"
+    >
+
+    <textarea 
+      id="new-description"
+      placeholder="Descripción del curso"
+      class="modal-input"
+    ></textarea>
+
+    <input 
+      type="text"
+      id="new-image"
+      placeholder="URL de la imagen"
+      class="modal-input"
+    >
+
+    <div class="modal-actions">
+
+      <button 
+        class="btn-favorito"
+        onclick="crearServicio()"
+      >
+        Crear Curso
+      </button>
+
+      <button 
+        class="btn-close-modal secondary"
+        onclick="closeCreateModal()"
+      >
+        Cancelar
+      </button>
+
+    </div>
+
+  </div>
+</div>
 
   <script src="../js/script.js"></script>
   <script src="../js/servicios.js"></script>
