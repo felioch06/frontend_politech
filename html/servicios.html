@@ -131,3 +131,25 @@
   <script src="../js/servicios.js"></script>
 </body>
 </html>
+
+<!-- Modal Crear Curso -->
+<div id="crear-modal" class="modal">
+  <div class="modal-content">
+    <h2>Crear Nuevo Curso</h2>
+
+    <div class="form-group">
+      <input type="text" id="titulo-curso" placeholder="Título del curso">
+    </div>
+
+    <div class="form-group">
+      <textarea id="descripcion-curso" placeholder="Descripción"></textarea>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="imagen-curso" placeholder="URL de la imagen">
+    </div>
+
+    <button onclick="crearCurso()">Guardar</button>
+    <button class="btn-close-modal secondary" onclick="cerrarModalCrear()">Cancelar</button>
+  </div>
+</div>
