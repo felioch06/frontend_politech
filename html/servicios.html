@@ -110,69 +110,45 @@
     <a href="#" class="link-footer">Síguenos</a>
   </footer>
 
-  <!-- Modal de Detalle de Servicio -->
-  <div id="service-modal" class="modal">
-    <div class="modal-content modal-content--service">
-      <div id="modal-icon-container" class="modal-icon">
-        <span id="modal-icon-content"></span>
-      </div>
+<div class="modal active">
 
-      <h2 id="modal-title">Nombre del Servicio</h2>
-      <p id="modal-description">Descripción detallada.</p>
-
-      <div class="modal-actions">
-        <button id="btn-add-favorite" class="btn-favorito">Añadir a favoritos</button>
-        <a href="contacto.html" class="btn-contactar">Contacto</a>
-      </div>
-
-      <button class="btn-close-modal secondary" onclick="closeModal()">Cerrar</button>
-    </div>
-  </div>
-  <!-- Modal Crear Servicio -->
-<div id="create-modal" class="modal">
   <div class="modal-content">
 
     <h2>Crear Nuevo Curso</h2>
 
-    <input 
-      type="text" 
-      id="new-title" 
-      placeholder="Título del curso"
-      class="modal-input"
-    >
+    <p class="modal-subtitle">
+      Completa la información para agregar un nuevo curso.
+    </p>
 
-    <textarea 
-      id="new-description"
-      placeholder="Descripción del curso"
-      class="modal-input"
-    ></textarea>
+    <div class="modal-form-grid">
 
-    <input 
-      type="text"
-      id="new-image"
-      placeholder="URL de la imagen"
-      class="modal-input"
-    >
+      <div class="modal-group">
+        <label>Título del curso</label>
+        <input type="text" placeholder="Escribe el título del curso">
+      </div>
 
-    <div class="modal-actions">
+      <div class="modal-group">
+        <label>Descripción del curso</label>
+        <textarea placeholder="Escribe una descripción del curso"></textarea>
+      </div>
 
-      <button 
-        class="btn-favorito"
-        onclick="crearServicio()"
-      >
-        Crear Curso
-      </button>
-
-      <button 
-        class="btn-close-modal secondary"
-        onclick="closeCreateModal()"
-      >
-        Cancelar
-      </button>
+      <div class="modal-group full">
+        <label>URL de la imagen</label>
+        <input type="text" placeholder="Pega la URL de la imagen del curso">
+      </div>
 
     </div>
 
+    <div class="modal-actions">
+      <button class="btn-cancelar">Cancelar</button>
+
+      <button class="btn-crear-curso">
+        Crear Curso
+      </button>
+    </div>
+
   </div>
+
 </div>
 
   <script src="../js/script.js"></script>
