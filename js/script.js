@@ -43,7 +43,6 @@ function closeFavModal() {
         modal.classList.remove('active');
     }
 }
-
 function openCreateModal() {
   document.getElementById("createModal").classList.add("active");
 }
@@ -51,6 +50,8 @@ function openCreateModal() {
 function closeCreateModal() {
   document.getElementById("createModal").classList.remove("active");
 }
-window.addEventListener("load", () => {
+
+window.onload = function () {
   document.getElementById("createModal").classList.remove("active");
-});
+};
+
