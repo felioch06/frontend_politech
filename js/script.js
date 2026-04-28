@@ -51,3 +51,6 @@ function openCreateModal() {
 function closeCreateModal() {
   document.getElementById("createModal").classList.remove("active");
 }
+window.addEventListener("load", () => {
+  document.getElementById("createModal").classList.remove("active");
+});
