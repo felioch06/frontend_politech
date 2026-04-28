@@ -577,3 +577,20 @@ footer {
   margin-bottom: 25px;
 }
 
+#crear-modal .modal-content {
+  max-width: 500px;
+}
+
+#crear-modal input,
+#crear-modal textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#crear-modal button {
+  margin-top: 15px;
+  width: 100%;
+}
