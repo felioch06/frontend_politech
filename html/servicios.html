@@ -16,7 +16,7 @@
       <a href="servicios.html" class="active">Servicios</a>
       <a href="favoritos.html">Favoritos</a>
       <a href="contacto.html">Contacto</a>
-      <a href="#" class="btn-crear">Crear</a>
+      <button class="btn-crear" onclick="abrirModalCrear()">Crear</button>
     </nav>
   </header>
 
@@ -33,7 +33,7 @@
 
       <div class="card card-horizontal">
         <div class="card-img">
-          <img src="../assets/code.jpg" alt="Desarrollo Web">
+          <img src="../assets/code.jpg">
         </div>
         <div class="card-info">
           <h3>Desarrollo Web</h3>
@@ -44,7 +44,7 @@
 
       <div class="card card-horizontal">
         <div class="card-img">
-          <img src="../assets/ia.jpg" alt="Curso de IA">
+          <img src="../assets/ia.jpg">
         </div>
         <div class="card-info">
           <h3>Curso de IA</h3>
@@ -55,7 +55,7 @@
 
       <div class="card card-horizontal">
         <div class="card-img">
-          <img src="../assets/IT.webp" alt="Soporte IT">
+          <img src="../assets/IT.webp">
         </div>
         <div class="card-info">
           <h3>Soporte IT</h3>
@@ -66,7 +66,7 @@
 
       <div class="card card-horizontal">
         <div class="card-img">
-          <img src="../assets/cloud.png" alt="Cloud Computing">
+          <img src="../assets/cloud.png">
         </div>
         <div class="card-info">
           <h3>Cloud Computing</h3>
@@ -77,7 +77,7 @@
 
       <div class="card card-horizontal">
         <div class="card-img">
-          <img src="../assets/cyber.webp" alt="Ciberseguridad">
+          <img src="../assets/cyber.webp">
         </div>
         <div class="card-info">
           <h3>Ciberseguridad</h3>
@@ -88,7 +88,7 @@
 
       <div class="card card-horizontal">
         <div class="card-img">
-          <img src="../assets/consultory.webp" alt="Consultoría Tech">
+          <img src="../assets/consultory.webp">
         </div>
         <div class="card-info">
           <h3>Consultoría Tech</h3>
@@ -101,22 +101,16 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <a href="#" class="link-footer">Sobre Nosotros</a>
-    <a href="contacto.html" class="link-footer">Contacto</a>
-    <a href="#" class="link-footer">Síguenos</a>
-  </footer>
-
-  <!-- Modal de Detalle de Servicio -->
+  <!-- Modal Detalle -->
   <div id="service-modal" class="modal">
     <div class="modal-content modal-content--service">
-      <div id="modal-icon-container" class="modal-icon">
+
+      <div class="modal-icon">
         <span id="modal-icon-content"></span>
       </div>
 
-      <h2 id="modal-title">Nombre del Servicio</h2>
-      <p id="modal-description">Descripción detallada.</p>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
 
       <div class="modal-actions">
         <button id="btn-add-favorite" class="btn-favorito">Añadir a favoritos</button>
@@ -127,29 +121,21 @@
     </div>
   </div>
 
-  <script src="../js/script.js"></script>
+  <!-- Modal Crear -->
+  <div id="crear-modal" class="modal">
+    <div class="modal-content">
+      <h2>Crear Nuevo Curso</h2>
+
+      <input type="text" id="titulo-curso" placeholder="Título del curso">
+      <textarea id="descripcion-curso" placeholder="Descripción"></textarea>
+      <input type="text" id="imagen-curso" placeholder="URL de la imagen">
+
+      <button onclick="crearCurso()">Guardar</button>
+      <button class="btn-close-modal secondary" onclick="cerrarModalCrear()">Cancelar</button>
+    </div>
+  </div>
+
   <script src="../js/servicios.js"></script>
+
 </body>
 </html>
-
-<!-- Modal Crear Curso -->
-<div id="crear-modal" class="modal">
-  <div class="modal-content">
-    <h2>Crear Nuevo Curso</h2>
-
-    <div class="form-group">
-      <input type="text" id="titulo-curso" placeholder="Título del curso">
-    </div>
-
-    <div class="form-group">
-      <textarea id="descripcion-curso" placeholder="Descripción"></textarea>
-    </div>
-
-    <div class="form-group">
-      <input type="text" id="imagen-curso" placeholder="URL de la imagen">
-    </div>
-
-    <button onclick="crearCurso()">Guardar</button>
-    <button class="btn-close-modal secondary" onclick="cerrarModalCrear()">Cancelar</button>
-  </div>
-</div>
